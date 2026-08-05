@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Cappuccino</title>
+  <meta name="description" content="Get in touch with Cappuccino." />
+
+  <link rel="canonical" href="https://cappuccino.pet/contact" />
+  <link rel="icon" href="/favicon.ico" sizes="32x32" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#F5EFE6" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Cappuccino" />
+  <meta property="og:url" content="https://cappuccino.pet/contact" />
+  <meta property="og:title" content="Contact — Cappuccino" />
+  <meta property="og:description" content="Get in touch with Cappuccino." />
+  <meta property="og:image" content="https://cappuccino.pet/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Cappuccino — your dog’s health, in view." />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Contact — Cappuccino" />
+  <meta name="twitter:description" content="Get in touch with Cappuccino." />
+  <meta name="twitter:image" content="https://cappuccino.pet/og-image.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,400..700&family=Instrument+Serif:ital,wght@0,400;1,400&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,400..700&family=Instrument+Serif:ital,wght@0,400;1,400&display=swap" />
+
+  <style>
+    :root {
+      --cream: #F5EFE6; --milk-foam: #FAF6F0; --porcelain: #FFFDF9;
+      --espresso: #3B2A20; --espresso-70: #5C4A3F; --espresso-40: #9E938B; --espresso-20: #D6CFC8;
+      --amber: #C89B5B; --amber-hover: #B8894A; --amber-soft: #EFDDC1;
+      --sage: #8FA78A; --sage-soft: #DCE5D8;
+      --s-1: 4px; --s-2: 8px; --s-3: 12px; --s-4: 16px; --s-5: 24px; --s-6: 32px;
+      --s-7: 48px; --s-8: 64px; --s-9: 96px; --s-10: 128px;
+      --r-sm: 6px; --r-md: 12px; --r-lg: 20px; --r-xl: 28px; --r-full: 999px; --r-btn: 24px;
+      --shadow-xs: 0 1px 2px rgba(59, 42, 32, 0.04);
+      --shadow-sm: 0 2px 8px rgba(59, 42, 32, 0.06);
+      --shadow-md: 0 8px 24px rgba(59, 42, 32, 0.08);
+      --ease: cubic-bezier(0.32, 0.72, 0, 1);
+      --dur-fast: 180ms; --dur-med: 320ms;
+      --container-max: 1120px; --nav-height: 72px;
+      --font-display: 'Google Sans Flex', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-body: 'Google Sans Flex', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-serif: 'Instrument Serif', Georgia, serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: var(--font-body); font-size: 17px; line-height: 1.55;
+      color: var(--espresso-70); background: var(--cream);
+      -webkit-font-smoothing: antialiased; letter-spacing: -0.011em;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: var(--container-max); margin: 0 auto; padding: 0 var(--s-6); }
+    @media (max-width: 720px) { .container { padding: 0 var(--s-5); } }
+
+    .nav {
+      position: sticky; top: 0; z-index: 20; height: var(--nav-height);
+      background: rgba(245, 239, 230, 0.85);
+      backdrop-filter: saturate(150%) blur(12px); -webkit-backdrop-filter: saturate(150%) blur(12px);
+      border-bottom: 1px solid var(--espresso-20);
+    }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 100%; }
+    .wordmark {
+      font-family: var(--font-display); font-weight: 600; font-size: 26px;
+      font-variation-settings: 'opsz' 24, 'wght' 600; color: var(--espresso-70); letter-spacing: -0.02em;
+    }
+    .nav-links { display: flex; align-items: center; gap: var(--s-5); font-size: 15px; }
+    .nav-links a { color: var(--espresso-70); transition: color var(--dur-fast) var(--ease); }
+    .nav-links a:hover { color: var(--espresso); }
+    .nav-links a.active { color: var(--espresso); font-weight: 600; }
+
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      height: 48px; padding: 0 22px; border-radius: var(--r-btn); font-family: var(--font-body);
+      font-size: 15px; font-weight: 600; letter-spacing: -0.005em; cursor: pointer;
+      border: none; transition: all var(--dur-fast) var(--ease);
+    }
+    .btn-primary { background: var(--amber); color: var(--espresso); box-shadow: var(--shadow-sm); }
+    .btn-primary:hover { background: var(--amber-hover); transform: translateY(-1px); box-shadow: var(--shadow-md); }
+    .btn-ghost { background: transparent; color: var(--espresso-70); border: 1.5px solid var(--espresso-20); }
+    .btn-ghost:hover { background: var(--milk-foam); border-color: var(--espresso-40); }
+    .btn-sm { height: 48px; padding: 0 16px; font-size: 14px; }
+
+    .page-header { padding: var(--s-10) 0 var(--s-7); text-align: center; }
+    .section-eyebrow {
+      font-size: 13px; font-weight: 600; color: var(--amber-hover);
+      letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: var(--s-3);
+    }
+    .page-header h1 {
+      font-family: var(--font-display); font-weight: 600; font-size: 44px; line-height: 1.15;
+      letter-spacing: -0.03em; color: var(--espresso-70);
+      font-variation-settings: 'opsz' 144, 'wght' 600;
+      max-width: 560px; margin: 0 auto;
+    }
+    .page-header p {
+      font-size: 17px; color: var(--espresso-70); margin-top: var(--s-5);
+      max-width: 480px; margin-left: auto; margin-right: auto; line-height: 1.6;
+    }
+    @media (max-width: 720px) { .page-header h1 { font-size: 32px; } }
+
+    .contact-wrap { padding: 0 0 var(--s-9); }
+    .contact-cards {
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--s-5);
+      max-width: 720px; margin: 0 auto;
+    }
+    @media (max-width: 640px) { .contact-cards { grid-template-columns: 1fr; } }
+    .contact-card {
+      background: var(--porcelain); border: 1px solid var(--espresso-20);
+      border-radius: var(--r-lg); padding: var(--s-6); text-align: left;
+    }
+    .contact-card .icon {
+      width: 40px; height: 40px; background: var(--amber-soft); color: var(--amber-hover);
+      border-radius: var(--r-md); display: flex; align-items: center; justify-content: center;
+      margin-bottom: var(--s-4);
+    }
+    .contact-card .icon svg { width: 20px; height: 20px; stroke-width: 1.5; }
+    .contact-card h3 {
+      font-family: var(--font-display); font-weight: 600; font-size: 18px;
+      letter-spacing: -0.015em; margin-bottom: var(--s-2);
+    }
+    .contact-card p { font-size: 15px; color: var(--espresso-70); margin-bottom: var(--s-3); line-height: 1.55; }
+    .contact-card a.link {
+      color: var(--amber-hover); font-weight: 600; font-size: 15px;
+      text-decoration: underline; text-underline-offset: 3px;
+    }
+
+    .note-box {
+      max-width: 720px; margin: var(--s-8) auto 0; padding: var(--s-6);
+      background: var(--milk-foam); border: 1px solid var(--espresso-20); border-radius: var(--r-lg);
+    }
+    .note-box p { font-size: 15px; line-height: 1.6; color: var(--espresso-70); }
+    .note-box strong { color: var(--espresso); }
+
+    .footer { padding: var(--s-8) 0 var(--s-7); border-top: 1px solid var(--espresso-20); }
+    .footer-inner {
+      display: flex; justify-content: space-between; align-items: flex-start;
+      flex-wrap: wrap; gap: var(--s-6);
+    }
+    .footer-brand .wordmark { font-size: 20px; margin-bottom: var(--s-2); }
+    .footer-brand .dedication-mini {
+      font-family: var(--font-serif); font-weight: 400; font-style: italic;
+      color: var(--espresso-70); font-size: 16px; letter-spacing: -0.005em; margin-top: 4px;
+    }
+    .footer-links { display: flex; gap: var(--s-6); font-size: 14px; flex-wrap: wrap; }
+    .footer-links a { color: var(--espresso-70); transition: color var(--dur-fast) var(--ease); }
+    .footer-links a:hover { color: var(--espresso); }
+    .footer-fine {
+      margin-top: var(--s-7); padding-top: var(--s-5); border-top: 1px solid var(--espresso-20);
+      font-size: 12px; color: var(--espresso-40); display: flex; justify-content: space-between;
+      flex-wrap: wrap; gap: var(--s-3);
+    }
+    ::selection { background: var(--amber-soft); color: var(--espresso); }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="wordmark" aria-label="Cappuccino home">Cappuccino</a>
+      <div class="nav-links">
+        <a href="about.html">About</a>
+        <a href="index.html#how">How it works</a>
+        <a href="contact.html" class="active">Contact</a>
+        <a href="index.html#early" class="btn btn-ghost btn-sm">Join the early list</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <div class="container">
+      <div class="section-eyebrow">Get in touch</div>
+      <h1>We'd love to hear from you.</h1>
+      <p>Cappuccino is a small, private build right now — one founder, no support team yet. Every message gets read personally, and most get a real reply within a couple of days.</p>
+    </div>
+  </header>
+
+  <section class="contact-wrap">
+    <div class="container">
+      <div class="contact-cards">
+        <div class="contact-card">
+          <div class="icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+          </div>
+          <h3>Email</h3>
+          <p>For questions, feedback, press, or just to say hi.</p>
+          <a class="link" href="mailto:hello@cappuccino.pet">hello@cappuccino.pet</a>
+        </div>
+        <div class="contact-card">
+          <div class="icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </div>
+          <h3>Follow along</h3>
+          <p>We're posting the build in progress — no polish, no marketing sheen.</p>
+          <a class="link" href="https://instagram.com/cappuccinopet" target="_blank" rel="noopener">@cappuccinopet</a>
+        </div>
+      </div>
+
+      <div class="note-box">
+        <p><strong>Have a question about your dog's health?</strong> We're not able to give veterinary advice by email — please reach out to your vet or an emergency animal hospital for anything urgent. This page is for questions about Cappuccino the product, not individual pet health concerns.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="index.html" class="wordmark">Cappuccino</a>
+          <div class="dedication-mini">For Leo Cappuccino, Feb 2018 – Mar 2026.</div>
+        </div>
+        <div class="footer-links">
+          <a href="about.html">About</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <a href="contact.html">Contact</a>
+          <a href="https://instagram.com/cappuccinopet" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://tiktok.com/@cappuccinopet" target="_blank" rel="noopener">TikTok</a>
+        </div>
+      </div>
+      <div class="footer-fine">
+        <span>Cappuccino™ · Copyright © 2026 Faye Livia. All rights reserved. Informational only — not veterinary advice.</span>
+        <span>cappuccino.pet</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cloudflare Web Analytics — privacy-preserving, no cookies, no consent banner needed. -->
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+          data-cf-beacon='{"token": "c14d089b5d454776a1342657e92c1aa4"}'></script>
+</body>
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Cappuccino</title>
+  <meta name="description" content="Cappuccino exists because of Leo Cappuccino. This is why we built it, and what we believe about caring for dogs between vet visits." />
+
+  <link rel="canonical" href="https://cappuccino.pet/about" />
+  <link rel="icon" href="/favicon.ico" sizes="32x32" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#F5EFE6" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Cappuccino" />
+  <meta property="og:url" content="https://cappuccino.pet/about" />
+  <meta property="og:title" content="About Cappuccino — why we built this" />
+  <meta property="og:description" content="Cappuccino exists because of Leo Cappuccino. This is why we built it, and what we believe about caring for dogs between vet visits." />
+  <meta property="og:image" content="https://cappuccino.pet/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Cappuccino — your dog’s health, in view." />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="About Cappuccino — why we built this" />
+  <meta name="twitter:description" content="Cappuccino exists because of Leo Cappuccino. This is why we built it, and what we believe about caring for dogs between vet visits." />
+  <meta name="twitter:image" content="https://cappuccino.pet/og-image.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,400..700&family=Instrument+Serif:ital,wght@0,400;1,400&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,400..700&family=Instrument+Serif:ital,wght@0,400;1,400&display=swap" />
+
+  <style>
+    :root {
+      --cream: #F5EFE6; --milk-foam: #FAF6F0; --porcelain: #FFFDF9;
+      --espresso: #3B2A20; --espresso-70: #5C4A3F; --espresso-40: #9E938B; --espresso-20: #D6CFC8;
+      --amber: #C89B5B; --amber-hover: #B8894A; --amber-soft: #EFDDC1;
+      --sage: #8FA78A; --sage-soft: #DCE5D8; --dusty-rose: #B97A6E; --dusty-rose-soft: #EAD1CB;
+      --s-1: 4px; --s-2: 8px; --s-3: 12px; --s-4: 16px; --s-5: 24px; --s-6: 32px;
+      --s-7: 48px; --s-8: 64px; --s-9: 96px; --s-10: 128px;
+      --r-sm: 6px; --r-md: 12px; --r-lg: 20px; --r-xl: 28px; --r-full: 999px; --r-btn: 24px;
+      --shadow-xs: 0 1px 2px rgba(59, 42, 32, 0.04);
+      --shadow-sm: 0 2px 8px rgba(59, 42, 32, 0.06);
+      --shadow-md: 0 8px 24px rgba(59, 42, 32, 0.08);
+      --ease: cubic-bezier(0.32, 0.72, 0, 1);
+      --dur-fast: 180ms; --dur-med: 320ms; --dur-slow: 640ms;
+      --container-max: 1120px; --nav-height: 72px;
+      --font-display: 'Google Sans Flex', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-body: 'Google Sans Flex', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-serif: 'Instrument Serif', Georgia, serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-body); font-size: 17px; line-height: 1.55;
+      color: var(--espresso-70); background: var(--cream);
+      -webkit-font-smoothing: antialiased; letter-spacing: -0.011em;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: var(--container-max); margin: 0 auto; padding: 0 var(--s-6); }
+    @media (max-width: 720px) { .container { padding: 0 var(--s-5); } }
+
+    .nav {
+      position: sticky; top: 0; z-index: 20; height: var(--nav-height);
+      background: rgba(245, 239, 230, 0.85);
+      backdrop-filter: saturate(150%) blur(12px); -webkit-backdrop-filter: saturate(150%) blur(12px);
+      border-bottom: 1px solid var(--espresso-20);
+    }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 100%; }
+    .wordmark {
+      font-family: var(--font-display); font-weight: 600; font-size: 26px;
+      font-variation-settings: 'opsz' 24, 'wght' 600; color: var(--espresso-70); letter-spacing: -0.02em;
+    }
+    .nav-links { display: flex; align-items: center; gap: var(--s-5); font-size: 15px; }
+    .nav-links a { color: var(--espresso-70); transition: color var(--dur-fast) var(--ease); }
+    .nav-links a:hover { color: var(--espresso); }
+    .nav-links a.active { color: var(--espresso); font-weight: 600; }
+
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      height: 48px; padding: 0 22px; border-radius: var(--r-btn); font-family: var(--font-body);
+      font-size: 15px; font-weight: 600; letter-spacing: -0.005em; cursor: pointer;
+      border: none; transition: all var(--dur-fast) var(--ease);
+    }
+    .btn-primary { background: var(--amber); color: var(--espresso); box-shadow: var(--shadow-sm); }
+    .btn-primary:hover { background: var(--amber-hover); transform: translateY(-1px); box-shadow: var(--shadow-md); }
+    .btn-ghost { background: transparent; color: var(--espresso-70); border: 1.5px solid var(--espresso-20); }
+    .btn-ghost:hover { background: var(--milk-foam); border-color: var(--espresso-40); }
+    .btn-sm { height: 48px; padding: 0 16px; font-size: 14px; }
+
+    .page-header { padding: var(--s-10) 0 var(--s-8); }
+    .section-eyebrow {
+      font-size: 13px; font-weight: 600; color: var(--amber-hover);
+      letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: var(--s-3);
+    }
+    .page-header h1 {
+      font-family: var(--font-display); font-weight: 600; font-size: 52px; line-height: 1.1;
+      letter-spacing: -0.03em; color: var(--espresso-70);
+      font-variation-settings: 'opsz' 144, 'wght' 600; max-width: 720px;
+    }
+    @media (max-width: 720px) { .page-header h1 { font-size: 36px; } }
+
+    .section { padding: var(--s-8) 0; }
+    .section.alt { background: var(--milk-foam); }
+    .prose { max-width: 720px; }
+    .prose p {
+      font-size: 17px; line-height: 1.7; color: var(--espresso-70);
+      margin-bottom: var(--s-5); font-weight: 400;
+    }
+    .prose p:last-child { margin-bottom: 0; }
+    .prose em {
+      font-family: var(--font-serif); font-style: italic; font-weight: 400;
+      font-size: 20px; color: var(--espresso-70); letter-spacing: -0.015em; line-height: 1.4;
+    }
+
+    .section h2 {
+      font-family: var(--font-display); font-weight: 600; font-size: 32px; line-height: 1.15;
+      letter-spacing: -0.025em; color: var(--espresso-70);
+      font-variation-settings: 'opsz' 144, 'wght' 600; margin-bottom: var(--s-5);
+    }
+
+    .values {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s-5);
+    }
+    @media (max-width: 800px) { .values { grid-template-columns: 1fr; } }
+    .value-card {
+      background: var(--porcelain); border: 1px solid var(--espresso-20);
+      border-radius: var(--r-lg); padding: var(--s-6);
+    }
+    .value-card h3 {
+      font-family: var(--font-display); font-weight: 600; font-size: 19px;
+      letter-spacing: -0.015em; margin-bottom: var(--s-2);
+      font-variation-settings: 'opsz' 24, 'wght' 600;
+    }
+    .value-card p { font-size: 15px; line-height: 1.55; color: var(--espresso-70); }
+
+    .dedication-block {
+      text-align: center; padding: var(--s-8) 0;
+    }
+    .dedication-block .serif-line {
+      font-family: var(--font-serif); font-style: italic; font-weight: 400;
+      font-size: 32px; color: var(--espresso-70); letter-spacing: -0.01em;
+    }
+
+    .cta-row { display: flex; gap: var(--s-3); flex-wrap: wrap; margin-top: var(--s-6); }
+
+    .footer { padding: var(--s-8) 0 var(--s-7); border-top: 1px solid var(--espresso-20); }
+    .footer-inner {
+      display: flex; justify-content: space-between; align-items: flex-start;
+      flex-wrap: wrap; gap: var(--s-6);
+    }
+    .footer-brand .wordmark { font-size: 20px; margin-bottom: var(--s-2); }
+    .footer-brand .dedication-mini {
+      font-family: var(--font-serif); font-weight: 400; font-style: italic;
+      color: var(--espresso-70); font-size: 16px; letter-spacing: -0.005em; margin-top: 4px;
+    }
+    .footer-links { display: flex; gap: var(--s-6); font-size: 14px; flex-wrap: wrap; }
+    .footer-links a { color: var(--espresso-70); transition: color var(--dur-fast) var(--ease); }
+    .footer-links a:hover { color: var(--espresso); }
+    .footer-fine {
+      margin-top: var(--s-7); padding-top: var(--s-5); border-top: 1px solid var(--espresso-20);
+      font-size: 12px; color: var(--espresso-40); display: flex; justify-content: space-between;
+      flex-wrap: wrap; gap: var(--s-3);
+    }
+    ::selection { background: var(--amber-soft); color: var(--espresso); }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="wordmark" aria-label="Cappuccino home">Cappuccino</a>
+      <div class="nav-links">
+        <a href="about.html" class="active">About</a>
+        <a href="index.html#how">How it works</a>
+        <a href="contact.html">Contact</a>
+        <a href="index.html#early" class="btn btn-ghost btn-sm">Join the early list</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <div class="container">
+      <div class="section-eyebrow">About Cappuccino</div>
+      <h1>A quiet companion, built out of love for one very good dog.</h1>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="prose">
+        <p>Leo was a bundle of energy and the gentlest, sweetest soul I've ever known. He greeted every human like an old friend, trusted most dogs, ran full-tilt at life. We did what most people do — took him to the vet once a year, watched him grow up, celebrated his birthdays, told ourselves he'd be with us forever. He was healthy. He was happy. He was ours.</p>
+        <p>Then, in the space of a single visit, that whole life came apart. Osteosarcoma. An aggressive, unforgiving bone cancer that gave us months where we thought we had years. We dove in — read every paper, chased every treatment, called every specialist at every hour we could reach one. We were racing a clock that had almost already run out, and we knew it. Leo turned eight. A few weeks later, he was gone. <em>He took his last breath in my arms.</em></p>
+        <p>Cappuccino exists because of him. Between the annual vet visit and the emergency room visit lives a long, quiet middle — where small changes accumulate, where numbers shift a little each month, where the difference between catching something early and catching it too late is often decided in silence. Leo deserved someone paying attention in that middle. Every dog does. I built Cappuccino so more dogs can live longer, happier lives — because that is what a soul as gentle as his would have wanted. It's what I wanted, too. And now I want it for your dog.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="container">
+      <div class="section-eyebrow">How we work</div>
+      <h2 style="margin-bottom: var(--s-4);">The quiet work happens in the background.</h2>
+      <p style="font-size: 17px; line-height: 1.7; color: var(--espresso-70); max-width: 620px;">Every lab report you upload gets read, every value gets tracked, every trend gets watched — quietly, month after month. We never diagnose and we never alarm. We notice, and then we tell you, plainly and warmly, what's worth a closer look. Think of it less like software and more like a friend who happens to remember every number your vet has ever recorded — and cares enough to keep watching.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-eyebrow">What we believe</div>
+      <h2 style="margin-bottom: var(--s-6);">A few things we won't compromise on.</h2>
+      <div class="values">
+        <div class="value-card">
+          <h3>Your vet leads.</h3>
+          <p>Cappuccino surfaces patterns and asks better questions. It never diagnoses, and it never tells you to skip a vet visit. It makes the visits you do have more useful.</p>
+        </div>
+        <div class="value-card">
+          <h3>Calm over alarming.</h3>
+          <p>We don't send push notifications designed to spike your anxiety. A monthly briefing, written plainly, is the whole rhythm. No red banners, no urgency theater.</p>
+        </div>
+        <div class="value-card">
+          <h3>Your data stays yours.</h3>
+          <p>We don't sell pet health data. Ever. Full stop. Read the specifics on our <a href="privacy.html" style="text-decoration: underline; text-underline-offset: 3px;">Privacy Policy</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="container">
+      <div class="dedication-block">
+        <div class="section-eyebrow" style="margin-bottom: var(--s-4);">In memory</div>
+        <div class="serif-line">For Leo Cappuccino, Feb 2018 – Mar 2026.</div>
+        <div class="cta-row" style="justify-content: center;">
+          <a href="index.html#early" class="btn btn-primary">Join the early list</a>
+          <a href="contact.html" class="btn btn-ghost">Get in touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="index.html" class="wordmark">Cappuccino</a>
+          <div class="dedication-mini">For Leo Cappuccino, Feb 2018 – Mar 2026.</div>
+        </div>
+        <div class="footer-links">
+          <a href="about.html">About</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <a href="contact.html">Contact</a>
+          <a href="https://instagram.com/cappuccinopet" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://tiktok.com/@cappuccinopet" target="_blank" rel="noopener">TikTok</a>
+        </div>
+      </div>
+      <div class="footer-fine">
+        <span>Cappuccino™ · Copyright © 2026 Faye Livia. All rights reserved. Informational only — not veterinary advice.</span>
+        <span>cappuccino.pet</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cloudflare Web Analytics — privacy-preserving, no cookies, no consent banner needed. -->
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+          data-cf-beacon='{"token": "c14d089b5d454776a1342657e92c1aa4"}'></script>
+</body>
+</html>

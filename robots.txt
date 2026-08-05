@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# Prototype app pages — not part of the public product yet.
+Disallow: /register-pet
+Disallow: /register-pet.html
+Disallow: /dashboard
+Disallow: /dashboard.html
+Disallow: /records
+Disallow: /records.html
+Disallow: /reports
+Disallow: /reports.html
+
+Sitemap: https://cappuccino.pet/sitemap.xml

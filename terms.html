@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service — Cappuccino</title>
+  <meta name="description" content="The terms that govern your use of Cappuccino." />
+
+  <link rel="canonical" href="https://cappuccino.pet/terms" />
+  <link rel="icon" href="/favicon.ico" sizes="32x32" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#F5EFE6" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Cappuccino" />
+  <meta property="og:url" content="https://cappuccino.pet/terms" />
+  <meta property="og:title" content="Terms of Service — Cappuccino" />
+  <meta property="og:description" content="The terms that govern your use of Cappuccino." />
+  <meta property="og:image" content="https://cappuccino.pet/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Cappuccino — your dog’s health, in view." />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Terms of Service — Cappuccino" />
+  <meta name="twitter:description" content="The terms that govern your use of Cappuccino." />
+  <meta name="twitter:image" content="https://cappuccino.pet/og-image.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,400..700&family=Instrument+Serif:ital,wght@0,400;1,400&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,400..700&family=Instrument+Serif:ital,wght@0,400;1,400&display=swap" />
+
+  <style>
+    :root {
+      --cream: #F5EFE6; --milk-foam: #FAF6F0; --porcelain: #FFFDF9;
+      --espresso: #3B2A20; --espresso-70: #5C4A3F; --espresso-40: #9E938B; --espresso-20: #D6CFC8;
+      --amber: #C89B5B; --amber-hover: #B8894A; --amber-soft: #EFDDC1;
+      --dusty-rose: #B97A6E; --dusty-rose-soft: #EAD1CB;
+      --alert-warning-bg: #FFFBEA; --alert-warning-border: #F5C451;
+      --alert-warning-icon-bg: #F6B93B; --alert-warning-icon: #92400E;
+      --alert-warning-title: #7C2D12; --alert-warning-body: #92400E;
+      --s-1: 4px; --s-2: 8px; --s-3: 12px; --s-4: 16px; --s-5: 24px; --s-6: 32px;
+      --s-7: 48px; --s-8: 64px; --s-9: 96px; --s-10: 128px;
+      --r-sm: 6px; --r-md: 12px; --r-lg: 20px; --r-full: 999px; --r-btn: 24px;
+      --shadow-sm: 0 2px 8px rgba(59, 42, 32, 0.06);
+      --ease: cubic-bezier(0.32, 0.72, 0, 1);
+      --dur-fast: 180ms;
+      --container-max: 1120px; --container-narrow: 760px; --nav-height: 72px;
+      --font-display: 'Google Sans Flex', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-body: 'Google Sans Flex', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-serif: 'Instrument Serif', Georgia, serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: var(--font-body); font-size: 16px; line-height: 1.6;
+      color: var(--espresso-70); background: var(--cream);
+      -webkit-font-smoothing: antialiased; letter-spacing: -0.011em;
+    }
+    a { color: var(--amber-hover); text-decoration: underline; text-underline-offset: 3px; }
+    .container { max-width: var(--container-max); margin: 0 auto; padding: 0 var(--s-6); }
+    .narrow { max-width: var(--container-narrow); margin: 0 auto; }
+    @media (max-width: 720px) { .container { padding: 0 var(--s-5); } }
+
+    .nav {
+      position: sticky; top: 0; z-index: 20; height: var(--nav-height);
+      background: rgba(245, 239, 230, 0.85);
+      backdrop-filter: saturate(150%) blur(12px); -webkit-backdrop-filter: saturate(150%) blur(12px);
+      border-bottom: 1px solid var(--espresso-20);
+    }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 100%; }
+    .wordmark {
+      font-family: var(--font-display); font-weight: 600; font-size: 26px;
+      font-variation-settings: 'opsz' 24, 'wght' 600; color: var(--espresso-70); letter-spacing: -0.02em;
+      text-decoration: none;
+    }
+    .nav-links { display: flex; align-items: center; gap: var(--s-5); font-size: 15px; }
+    .nav-links a { color: var(--espresso-70); text-decoration: none; }
+    .nav-links a:hover { color: var(--espresso); }
+    .btn { display: inline-flex; align-items: center; justify-content: center; height: 48px; padding: 0 16px; border-radius: var(--r-btn);
+      font-size: 14px; font-weight: 600; border: 1.5px solid var(--espresso-20); text-decoration: none; }
+    .btn:hover { background: var(--milk-foam); }
+
+    .page-header { padding: var(--s-9) 0 var(--s-6); }
+    .section-eyebrow {
+      font-size: 13px; font-weight: 600; color: var(--amber-hover);
+      letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: var(--s-3);
+    }
+    .page-header h1 {
+      font-family: var(--font-display); font-weight: 600; font-size: 40px; line-height: 1.15;
+      letter-spacing: -0.03em; color: var(--espresso-70);
+      font-variation-settings: 'opsz' 144, 'wght' 600;
+    }
+    .meta-line { font-size: 14px; color: var(--espresso-40); margin-top: var(--s-3); }
+
+    .callout {
+      display: flex; align-items: flex-start; gap: 16px;
+      background: var(--alert-warning-bg); border: 1.5px solid var(--alert-warning-border);
+      border-radius: var(--r-lg); padding: 20px 24px; margin: var(--s-6) 0;
+    }
+    .callout-icon {
+      flex-shrink: 0; width: 48px; height: 48px; border-radius: 50%;
+      background: var(--alert-warning-icon-bg); color: var(--alert-warning-icon);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .callout-icon svg { width: 24px; height: 24px; }
+    .callout-body { flex: 1; }
+    .callout strong {
+      display: block; margin-bottom: 4px; font-size: 19px; font-weight: 700;
+      color: var(--alert-warning-title); letter-spacing: -0.01em; text-transform: none;
+    }
+    .callout p { font-size: 16px; line-height: 1.5; color: var(--alert-warning-body); margin: 0; }
+
+    .medical-banner {
+      background: var(--espresso); color: var(--porcelain);
+      border-radius: var(--r-lg); padding: var(--s-6); margin: var(--s-7) 0;
+    }
+    .medical-banner strong {
+      display: block; font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em;
+      color: var(--amber-soft); margin-bottom: var(--s-3);
+    }
+    .medical-banner p { color: var(--porcelain); font-size: 16px; line-height: 1.7; margin: 0; }
+    .medical-banner p + p { margin-top: var(--s-3); }
+
+    .legal { padding-bottom: var(--s-9); }
+    .legal h2 {
+      font-family: var(--font-display); font-weight: 600; font-size: 22px;
+      color: var(--espresso); margin: var(--s-8) 0 var(--s-4);
+      letter-spacing: -0.015em;
+    }
+    .legal h2:first-child { margin-top: 0; }
+    .legal p { margin-bottom: var(--s-4); font-size: 16px; line-height: 1.7; }
+    .legal ul { margin: 0 0 var(--s-4) var(--s-5); }
+    .legal li { margin-bottom: var(--s-2); line-height: 1.6; }
+    .legal strong { color: var(--espresso); font-weight: 600; }
+    .toc {
+      background: var(--milk-foam); border: 1px solid var(--espresso-20);
+      border-radius: var(--r-lg); padding: var(--s-5) var(--s-6); margin-bottom: var(--s-8);
+    }
+    .toc-title { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; color: var(--espresso-40); margin-bottom: var(--s-3); }
+    .toc ol { margin-left: var(--s-5); }
+    .toc li { margin-bottom: var(--s-2); font-size: 15px; }
+    .toc a { color: var(--espresso-70); text-decoration: none; }
+    .toc a:hover { color: var(--amber-hover); }
+
+    .footer { padding: var(--s-8) 0 var(--s-7); border-top: 1px solid var(--espresso-20); }
+    .footer-inner { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: var(--s-6); }
+    .footer-brand .wordmark { font-size: 20px; margin-bottom: var(--s-2); display: block; }
+    .footer-brand .dedication-mini {
+      font-family: var(--font-serif); font-weight: 400; font-style: italic;
+      color: var(--espresso-70); font-size: 16px; margin-top: 4px;
+    }
+    .footer-links { display: flex; gap: var(--s-6); font-size: 14px; flex-wrap: wrap; }
+    .footer-links a { color: var(--espresso-70); text-decoration: none; }
+    .footer-links a:hover { color: var(--espresso); }
+    .footer-fine {
+      margin-top: var(--s-7); padding-top: var(--s-5); border-top: 1px solid var(--espresso-20);
+      font-size: 12px; color: var(--espresso-40); display: flex; justify-content: space-between;
+      flex-wrap: wrap; gap: var(--s-3);
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="wordmark">Cappuccino</a>
+      <div class="nav-links">
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="index.html#early" class="btn">Join the early list</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <div class="container narrow">
+      <div class="section-eyebrow">Legal</div>
+      <h1>Terms of Service</h1>
+      <div class="meta-line">Last updated: July 25, 2026 · Applies to cappuccino.pet and the Cappuccino app</div>
+
+      <div class="callout">
+        <span class="callout-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2 20h20L12 3z"/><line x1="12" y1="10" x2="12" y2="14"/><circle cx="12" cy="17" r="0.5" fill="currentColor"/></svg>
+        </span>
+        <div class="callout-body">
+          <strong>Founder's note</strong>
+          <p>Like the Privacy Policy, this is a plain-language draft written by Cappuccino's founder. It will be reviewed by a qualified attorney before the product opens to the public — especially given the health-adjacent nature of the product. Treat this as an honest starting point, not a finished legal instrument.</p>
+        </div>
+      </div>
+
+      <div class="medical-banner">
+        <strong>Please read this first</strong>
+        <p>Cappuccino is an informational tool. It is not a substitute for professional veterinary care, and it does not diagnose, treat, cure, or prevent any disease.</p>
+        <p>If your dog is showing signs of illness or injury, or you have any concern about their health, contact your veterinarian or an emergency animal hospital right away. Never delay seeking veterinary care because of anything you read in Cappuccino.</p>
+      </div>
+    </div>
+  </header>
+
+  <section class="legal">
+    <div class="container narrow">
+
+      <div class="toc">
+        <div class="toc-title">Contents</div>
+        <ol>
+          <li><a href="#acceptance">Acceptance of terms</a></li>
+          <li><a href="#service">What Cappuccino is</a></li>
+          <li><a href="#medical">Medical disclaimer</a></li>
+          <li><a href="#ai-content">AI-generated content</a></li>
+          <li><a href="#eligibility">Eligibility and accounts</a></li>
+          <li><a href="#use">Acceptable use</a></li>
+          <li><a href="#content">Your content</a></li>
+          <li><a href="#ip">Our intellectual property</a></li>
+          <li><a href="#termination">Termination</a></li>
+          <li><a href="#warranty">Disclaimer of warranties</a></li>
+          <li><a href="#liability">Limitation of liability</a></li>
+          <li><a href="#law">Governing law</a></li>
+          <li><a href="#changes">Changes to these terms</a></li>
+          <li><a href="#contact">Contact us</a></li>
+        </ol>
+      </div>
+
+      <h2 id="acceptance">1. Acceptance of terms</h2>
+      <p>By using cappuccino.pet or the Cappuccino app (together, the "Service"), you agree to these Terms of Service. If you don't agree, please don't use the Service.</p>
+
+      <h2 id="service">2. What Cappuccino is</h2>
+      <p>Cappuccino is a web application that helps dog owners organize their pet's medical records and understand trends in lab results over time. It's built to help you have better, more informed conversations with your veterinarian — not to replace them.</p>
+
+      <h2 id="medical">3. Medical disclaimer</h2>
+      <p><strong>Cappuccino is not a licensed veterinarian and does not practice veterinary medicine.</strong> Nothing in the Service — including any report, flag, trend, or message you receive — constitutes veterinary advice, diagnosis, or treatment. All content is provided for informational purposes only.</p>
+      <p>Always seek the advice of a licensed veterinarian with any questions about your dog's health. Never disregard professional veterinary advice, or delay seeking it, because of something you saw in Cappuccino. If you believe your dog is experiencing a medical emergency, contact your vet or an emergency animal hospital immediately.</p>
+
+      <h2 id="ai-content">4. AI-generated content</h2>
+      <p>Cappuccino uses artificial intelligence (including Anthropic's Claude models) to read uploaded medical records and generate reports. AI systems can make mistakes — they may misread a value, miss context a human would catch, or phrase something imprecisely. Always review AI-extracted values against your original documents, and treat every report as a starting point for a conversation with your vet, not a final word.</p>
+
+      <h2 id="eligibility">5. Eligibility and accounts</h2>
+      <p>You must be at least 18 years old to create a Cappuccino account. You're responsible for keeping your account credentials secure and for all activity under your account. Let us know right away if you suspect unauthorized access.</p>
+
+      <h2 id="use">6. Acceptable use</h2>
+      <p>You agree not to:</p>
+      <ul>
+        <li>Use the Service for any unlawful purpose.</li>
+        <li>Upload content you don't have the right to upload (for example, another person's pet's medical records without permission).</li>
+        <li>Attempt to reverse-engineer, scrape, or interfere with the Service.</li>
+        <li>Use the Service to provide veterinary advice to others in a professional capacity without appropriate licensure.</li>
+      </ul>
+
+      <h2 id="content">7. Your content</h2>
+      <p>You own the pet profile information and medical records you upload. By uploading content, you give us a limited license to store, process, and display it back to you as part of providing the Service (for example, extracting lab values and generating your reports). We do not use your content to train third-party AI models, and we do not sell it. See our <a href="privacy.html">Privacy Policy</a> for more detail.</p>
+
+      <h2 id="ip">8. Our intellectual property</h2>
+      <p>The Cappuccino name, logo, and the Service's design and code are owned by Faye Livia. You may not copy, reproduce, or use them without our permission.</p>
+
+      <h2 id="termination">9. Termination</h2>
+      <p>You can stop using Cappuccino and delete your account at any time. We may suspend or terminate accounts that violate these terms, with notice where reasonably possible.</p>
+
+      <h2 id="warranty">10. Disclaimer of warranties</h2>
+      <p>The Service is provided "as is," without warranties of any kind, express or implied. We don't guarantee the Service will be uninterrupted, error-free, or that any AI-extracted data or report will be fully accurate.</p>
+
+      <h2 id="liability">11. Limitation of liability</h2>
+      <p>To the fullest extent permitted by law, Cappuccino is not liable for any indirect, incidental, or consequential damages arising from your use of the Service, including any decisions made based on information in the Service. This includes, without limitation, any outcome related to your pet's health. Nothing in these terms limits liability that cannot be limited under applicable law.</p>
+
+      <h2 id="law">12. Governing law</h2>
+      <p><em>[Placeholder — to be finalized with attorney review based on the state/jurisdiction of incorporation.]</em> These terms will be governed by the laws of the founder's home jurisdiction, without regard to conflict-of-law principles.</p>
+
+      <h2 id="changes">13. Changes to these terms</h2>
+      <p>We may update these terms as the product evolves. We'll update the date at the top when we do, and we'll make a reasonable effort to notify you of material changes directly.</p>
+
+      <h2 id="contact">14. Contact us</h2>
+      <p>Questions about these terms? Reach us at <a href="mailto:hello@cappuccino.pet">hello@cappuccino.pet</a>.</p>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="index.html" class="wordmark">Cappuccino</a>
+          <div class="dedication-mini">For Leo Cappuccino, Feb 2018 – Mar 2026.</div>
+        </div>
+        <div class="footer-links">
+          <a href="about.html">About</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <a href="contact.html">Contact</a>
+          <a href="https://instagram.com/cappuccinopet" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://tiktok.com/@cappuccinopet" target="_blank" rel="noopener">TikTok</a>
+        </div>
+      </div>
+      <div class="footer-fine">
+        <span>Cappuccino™ · Copyright © 2026 Faye Livia. All rights reserved. Informational only — not veterinary advice.</span>
+        <span>cappuccino.pet</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cloudflare Web Analytics — privacy-preserving, no cookies, no consent banner needed. -->
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+          data-cf-beacon='{"token": "c14d089b5d454776a1342657e92c1aa4"}'></script>
+</body>
+</html>

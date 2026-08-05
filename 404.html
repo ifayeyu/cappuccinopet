@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page not found — Cappuccino</title>
+  <meta name="description" content="That page doesn't exist." />
+  <meta name="robots" content="noindex" />
+
+  <link rel="icon" href="/favicon.ico" sizes="32x32" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#F5EFE6" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,400..700&family=Instrument+Serif:ital,wght@0,400;1,400&display=swap" />
+
+  <style>
+    :root {
+      --cream: #F5EFE6; --milk-foam: #FAF6F0; --porcelain: #FFFDF9;
+      --espresso: #3B2A20; --espresso-70: #5C4A3F; --espresso-40: #9E938B; --espresso-20: #D6CFC8;
+      --amber: #C89B5B; --amber-hover: #B8894A; --amber-soft: #EFDDC1;
+      --s-3: 12px; --s-4: 16px; --s-5: 24px; --s-6: 32px; --s-7: 48px; --s-8: 64px;
+      --r-md: 12px; --r-lg: 20px; --r-full: 999px; --r-btn: 24px;
+      --ease: cubic-bezier(0.32, 0.72, 0, 1); --dur-fast: 180ms;
+      --container-max: 1120px; --nav-height: 72px;
+      --font-display: 'Google Sans Flex', 'Onest', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-body: 'Google Sans Flex', 'Onest', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-serif: 'Instrument Serif', Georgia, serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: var(--font-body); font-size: 17px; line-height: 1.55;
+      color: var(--espresso-70); background: var(--cream);
+      -webkit-font-smoothing: antialiased; letter-spacing: -0.011em;
+      min-height: 100vh; display: flex; flex-direction: column;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: var(--container-max); margin: 0 auto; padding: 0 var(--s-6); width: 100%; }
+    @media (max-width: 720px) { .container { padding: 0 var(--s-5); } }
+
+    .nav {
+      height: var(--nav-height); display: flex; align-items: center;
+      border-bottom: 1px solid var(--espresso-20);
+    }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; width: 100%; }
+    .wordmark {
+      font-family: var(--font-display); font-weight: 600; font-size: 26px;
+      color: var(--espresso-70); letter-spacing: -0.02em;
+    }
+    .nav-links { display: flex; align-items: center; gap: var(--s-5); font-size: 15px; }
+    .nav-links a:hover { color: var(--espresso); }
+
+    main { flex: 1; display: flex; align-items: center; justify-content: center; padding: var(--s-8) 0; }
+    .lost { text-align: center; max-width: 520px; margin: 0 auto; }
+    .code {
+      font-family: var(--font-serif); font-style: italic;
+      font-size: 84px; line-height: 1; color: var(--amber); margin-bottom: var(--s-4);
+    }
+    .lost h1 {
+      font-family: var(--font-display); font-weight: 600; font-size: 30px;
+      color: var(--espresso); letter-spacing: -0.02em; margin-bottom: var(--s-4);
+    }
+    .lost p { font-size: 16px; line-height: 1.65; margin-bottom: var(--s-7); }
+    .actions { display: flex; gap: var(--s-3); justify-content: center; flex-wrap: wrap; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      height: 48px; padding: 0 22px; border-radius: var(--r-btn);
+      font-size: 15px; font-weight: 600; cursor: pointer; border: none;
+      transition: all var(--dur-fast) var(--ease);
+    }
+    .btn-primary { background: var(--amber); color: var(--espresso); }
+    .btn-primary:hover { background: var(--amber-hover); transform: translateY(-1px); }
+    .btn-ghost { background: transparent; color: var(--espresso-70); border: 1.5px solid var(--espresso-20); }
+    .btn-ghost:hover { background: var(--milk-foam); border-color: var(--espresso-40); }
+
+    .footer { border-top: 1px solid var(--espresso-20); padding: var(--s-6) 0; }
+    .footer-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: var(--s-4); flex-wrap: wrap; font-size: 14px; color: var(--espresso-40);
+    }
+    .footer-links { display: flex; gap: var(--s-5); }
+    .footer-links a:hover { color: var(--espresso-70); }
+    .footer-fine {
+      margin-top: var(--s-4); font-size: 13px; color: var(--espresso-40);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="wordmark">Cappuccino</a>
+      <div class="nav-links">
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+      <div class="lost">
+        <div class="code">404</div>
+        <h1>This page wandered off.</h1>
+        <p>
+          The link you followed doesn't lead anywhere — it may have moved, or it may never
+          have existed. Nothing's broken on your end.
+        </p>
+        <div class="actions">
+          <a href="index.html" class="btn btn-primary">Back to home</a>
+          <a href="contact.html" class="btn btn-ghost">Tell us what you were looking for</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>For Leo Cappuccino, Feb 2018 – Mar 2026.</span>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+    <div class="container">
+      <div class="footer-fine">
+        Cappuccino™ · Copyright © 2026 Faye Livia. All rights reserved. Informational only — not veterinary advice.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cloudflare Web Analytics — privacy-preserving, no cookies, no consent banner needed. -->
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+          data-cf-beacon='{"token": "c14d089b5d454776a1342657e92c1aa4"}'></script>
+</body>
+</html>
