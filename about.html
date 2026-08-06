@@ -116,6 +116,24 @@
       font-size: 20px; color: var(--espresso-70); letter-spacing: -0.015em; line-height: 1.4;
     }
 
+    .story-grid {
+      display: grid; grid-template-columns: 1.15fr 0.85fr; gap: var(--s-8);
+      align-items: center;
+    }
+    .story-grid .prose { max-width: none; }
+    .story-photo img {
+      width: 100%; height: auto; display: block;
+      border-radius: var(--r-lg); object-fit: cover;
+    }
+    .story-photo-caption {
+      margin-top: var(--s-3); font-family: var(--font-serif); font-style: italic;
+      font-size: 15px; color: var(--espresso-40); text-align: center;
+    }
+    @media (max-width: 860px) {
+      .story-grid { grid-template-columns: 1fr; gap: var(--s-6); }
+      .story-photo { order: -1; max-width: 340px; margin: 0 auto; width: 100%; }
+    }
+
     .section h2 {
       font-family: var(--font-display); font-weight: 600; font-size: 32px; line-height: 1.15;
       letter-spacing: -0.025em; color: var(--espresso-70);
@@ -191,10 +209,16 @@
 
   <section class="section">
     <div class="container">
-      <div class="prose">
-        <p>Leo was a bundle of energy and the gentlest, sweetest soul I've ever known. He greeted every human like an old friend, trusted most dogs, ran full-tilt at life. We did what most people do — took him to the vet once a year, watched him grow up, celebrated his birthdays, told ourselves he'd be with us forever. He was healthy. He was happy. He was ours.</p>
-        <p>Then, in the space of a single visit, that whole life came apart. Osteosarcoma. An aggressive, unforgiving bone cancer that gave us months where we thought we had years. We dove in — read every paper, chased every treatment, called every specialist at every hour we could reach one. We were racing a clock that had almost already run out, and we knew it. Leo turned eight. A few weeks later, he was gone. <em>He took his last breath in my arms.</em></p>
-        <p>Cappuccino exists because of him. Between the annual vet visit and the emergency room visit lives a long, quiet middle — where small changes accumulate, where numbers shift a little each month, where the difference between catching something early and catching it too late is often decided in silence. Leo deserved someone paying attention in that middle. Every dog does. I built Cappuccino so more dogs can live longer, happier lives — because that is what a soul as gentle as his would have wanted. It's what I wanted, too. And now I want it for your dog.</p>
+      <div class="story-grid">
+        <div class="prose">
+          <p>Leo was a bundle of energy and the gentlest, sweetest soul I've ever known. He greeted every human like an old friend, trusted most dogs, ran full-tilt at life. We did what most people do — took him to the vet once a year, watched him grow up, celebrated his birthdays, told ourselves he'd be with us forever. He was healthy. He was happy. He was ours.</p>
+          <p>Then, in the space of a single visit, that whole life came apart. Osteosarcoma. An aggressive, unforgiving bone cancer that gave us months where we thought we had years. We dove in — read every paper, chased every treatment, called every specialist at every hour we could reach one. We were racing a clock that had almost already run out, and we knew it. Leo turned eight. A few weeks later, he was gone. <em>He took his last breath in my arms.</em></p>
+          <p>Cappuccino exists because of him. Between the annual vet visit and the emergency room visit lives a long, quiet middle — where small changes accumulate, where numbers shift a little each month, where the difference between catching something early and catching it too late is often decided in silence. Leo deserved someone paying attention in that middle. Every dog does. I built Cappuccino so more dogs can live longer, happier lives — because that is what a soul as gentle as his would have wanted. It's what I wanted, too. And now I want it for your dog.</p>
+        </div>
+        <div class="story-photo">
+          <img src="/Images/Leo-cappuccino.jpg" alt="Leo Cappuccino, the dog who inspired Cappuccino" loading="lazy" width="900" height="1129" />
+          <div class="story-photo-caption">Leo Cappuccino · Feb 23, 2018 – Mar 7, 2026</div>
+        </div>
       </div>
     </div>
   </section>
