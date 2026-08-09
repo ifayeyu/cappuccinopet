@@ -146,6 +146,63 @@
     .nav-links a { color: var(--espresso-70); transition: color var(--dur-fast) var(--ease); }
     .nav-links a:hover { color: var(--espresso); }
 
+    /* ------- HAMBURGER (mobile nav) ------- */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+      width: 40px;
+      height: 40px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      z-index: 30;
+    }
+    .hamburger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--espresso-70);
+      border-radius: 2px;
+      transition: transform var(--dur-fast) var(--ease), opacity var(--dur-fast) var(--ease);
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    @media (max-width: 860px) {
+      .hamburger { display: flex; }
+      .nav-links {
+        position: fixed;
+        top: var(--nav-height);
+        left: 0; right: 0;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        background: var(--porcelain);
+        border-bottom: 1px solid var(--espresso-20);
+        padding: var(--s-3) var(--s-5) var(--s-5);
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: max-height var(--dur-med) var(--ease), opacity var(--dur-fast) var(--ease);
+      }
+      .nav-links.open { max-height: 80vh; opacity: 1; overflow-y: auto; }
+      .nav-links a, .nav-links .btn {
+        width: 100%;
+        padding: var(--s-4) 0;
+        font-size: 17px;
+        border-bottom: 1px solid var(--espresso-20);
+        justify-content: flex-start;
+        height: auto;
+      }
+      .nav-links a:last-of-type { border-bottom: none; }
+      .nav-links .btn { margin-top: var(--s-3); justify-content: center; border-bottom: none; }
+    }
+
     /* ------- BUTTONS ------- */
     .btn {
       display: inline-flex;
@@ -218,7 +275,7 @@
     .hero h1 {
       font-family: var(--font-display);
       font-weight: 600;
-      font-size: 49px;
+      font-size: 57px;
       line-height: 1.1;
       letter-spacing: -0.03em;
       color: var(--espresso-70);
@@ -646,7 +703,10 @@
   <nav class="nav" id="nav">
     <div class="container nav-inner">
       <a href="index.html" class="wordmark" aria-label="Cappuccino home">Cappuccino</a>
-      <div class="nav-links">
+      <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links" id="navLinks">
         <a href="#how">How it works</a>
         <a href="#watch">What we watch</a>
         <a href="about.html">About</a>
@@ -660,7 +720,7 @@
     <div class="container hero-inner">
       <div class="fade-in">
         <span class="eyebrow"><span class="eyebrow-dot"></span> Pet Health Monitoring Platform</span>
-        <h1>Between vet visits, a lot can go quiet.<span class="serif">Cappuccino keeps watching.</span></h1>
+        <h1>Between vet visits,<br>a lot can go quiet.<span class="serif">Cappuccino keeps watching.</span></h1>
         <p class="subhead">
           Cappuccino reads your dog's records, watches the health pattern between vet visits, and sends a warm monthly briefing — so the slow-moving numbers never become the sudden diagnosis.
         </p>
@@ -895,6 +955,22 @@
     const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 8);
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
+
+    // Mobile hamburger menu
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const navLinks = document.getElementById('navLinks');
+    hamburgerBtn.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      hamburgerBtn.classList.toggle('open', isOpen);
+      hamburgerBtn.setAttribute('aria-expanded', String(isOpen));
+    });
+    navLinks.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        hamburgerBtn.classList.remove('open');
+        hamburgerBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
 
     // Fade-in on intersect
     const observer = new IntersectionObserver((entries) => {

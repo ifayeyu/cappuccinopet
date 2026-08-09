@@ -79,6 +79,39 @@
     .nav-links { display: flex; align-items: center; gap: var(--s-5); font-size: 15px; }
     .nav-links a { color: var(--espresso-70); text-decoration: none; }
     .nav-links a:hover { color: var(--espresso); }
+
+    .hamburger {
+      display: none; flex-direction: column; justify-content: center; align-items: center;
+      gap: 5px; width: 40px; height: 40px; background: transparent; border: none;
+      cursor: pointer; padding: 0; z-index: 30;
+    }
+    .hamburger span {
+      display: block; width: 22px; height: 2px; background: var(--espresso-70); border-radius: 2px;
+      transition: transform var(--dur-fast) var(--ease), opacity var(--dur-fast) var(--ease);
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    @media (max-width: 860px) {
+      .hamburger { display: flex; }
+      .nav-links {
+        position: fixed; top: var(--nav-height); left: 0; right: 0;
+        flex-direction: column; align-items: stretch; gap: 0;
+        background: var(--porcelain); border-bottom: 1px solid var(--espresso-20);
+        padding: var(--s-3) var(--s-5) var(--s-5);
+        max-height: 0; overflow: hidden; opacity: 0;
+        transition: max-height 320ms var(--ease), opacity var(--dur-fast) var(--ease);
+      }
+      .nav-links.open { max-height: 80vh; opacity: 1; overflow-y: auto; }
+      .nav-links a, .nav-links .btn {
+        width: 100%; padding: var(--s-4) 0; font-size: 17px;
+        border-bottom: 1px solid var(--espresso-20); justify-content: flex-start; height: auto;
+      }
+      .nav-links a:last-of-type { border-bottom: none; }
+      .nav-links .btn { margin-top: var(--s-3); justify-content: center; border-bottom: none; }
+    }
+
     .btn { display: inline-flex; align-items: center; justify-content: center; height: 48px; padding: 0 16px; border-radius: var(--r-btn);
       font-size: 14px; font-weight: 600; border: 1.5px solid var(--espresso-20); text-decoration: none; }
     .btn:hover { background: var(--milk-foam); }
@@ -167,7 +200,10 @@
   <nav class="nav">
     <div class="container nav-inner">
       <a href="index.html" class="wordmark">Cappuccino</a>
-      <div class="nav-links">
+      <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links" id="navLinks">
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
         <a href="index.html#early" class="btn">Join the early list</a>
@@ -297,6 +333,23 @@
     </div>
   </footer>
 
+  <script>
+    // Mobile hamburger menu
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const navLinks = document.getElementById('navLinks');
+    hamburgerBtn.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      hamburgerBtn.classList.toggle('open', isOpen);
+      hamburgerBtn.setAttribute('aria-expanded', String(isOpen));
+    });
+    navLinks.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        hamburgerBtn.classList.remove('open');
+        hamburgerBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
   <!-- Cloudflare Web Analytics — privacy-preserving, no cookies, no consent banner needed. -->
   <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
           data-cf-beacon='{"token": "c14d089b5d454776a1342657e92c1aa4"}'></script>
